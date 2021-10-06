@@ -1,7 +1,4 @@
-from Tomcat:8.0
-
-add **/*.war /usr/local/tomcat/webapps/
-
-expose 8080
-
-CMD ["Catalina.sh", "run"]
+FROM tomcat:8.0
+ADD **/*.war /usr/local/tomcat/webapps/
+EXPOSE 8080
+CMD ["catalina.sh", "run"]
